@@ -40,7 +40,7 @@ var getJSONData = function(url){
     });
 }
 
-if(sessionStorage.getItem("user") === undefined || sessionStorage.getItem("pass") === undefined){
+if(sessionStorage.getItem("user") == undefined || sessionStorage.getItem("pass") == undefined){
 
   window.location.href = "login.html";
 }
