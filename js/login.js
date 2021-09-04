@@ -15,7 +15,7 @@ if(usuario.value == "" || contraseña.value == ""){
 }else{
     sessionStorage.setItem("user",usuario.value);
     sessionStorage.setItem("pass",contraseña.value);
-    alert("Bienvenido "+usuario.value);
+    alert("Bienvenid@ "+usuario.value);
 
     window.location.href="index.html"
 

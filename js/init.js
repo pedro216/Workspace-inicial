@@ -45,8 +45,14 @@ if(sessionStorage.getItem("user") == undefined || sessionStorage.getItem("pass")
   window.location.href = "login.html";
 }
 
+function getUser(){
+let nombre = sessionStorage.getItem("user");
+document.getElementById("nombreUsuario").innerHTML+= " " + nombre + "!";
+
+}
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
+  getUser()
 });
