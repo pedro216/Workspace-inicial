@@ -13,33 +13,87 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a class="py-2 d-none d-md-inline-block" id="nombreUsuario" href="">Hola, </a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">&gteMercado - Todo lo que buscas está aquí&lt</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Inicio </a>
+        <a class="nav-item nav-link" href="categories.html">Categorias</a>
+        <a class="nav-item nav-link active" href="products.html">Productos <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="sell.html">Vender</a>
+        <a class="nav-item nav-link" href="cart.html">Carrito</a>
+        
+        <a id="nombreUsuario" class="nav-item nav-link disabled text-end" href="#" tabindex="-1" aria-disabled="true">Hola, </a>
+      </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <main role="main">
+    <div class="container mt-5 bg-primary" >
+      <div class="text-center p-4">
+        <h2>Información del producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del producto seeleccionado.</p>
+        <p class="small alert-
+        warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea el producto
+          seleccionado previamente, siempre se visualizará la presente: <strong>Chevrolet Onix</strong>.</p>
+      </div>
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción:</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+
+        <dt>Cantidad de productos vendidos:</dt>
+        <dd>
+          <p id="productCount"></p>
+        </dd>
+
+        <dt>Precio:</dt>
+        <dd>
+          <p id="productCost"></p>
+        </dd>
+
+        <dt>Imágenes:</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+          </div>
+        </dd>
+
+        <dt>Categoria:</dt>
+        <dd>
+          <p id="productCategory"></p>
+        </dd>
+      </dl>
+
+      <dt>Comentarios:</dt>
+      <dd>
+        <div id="productComents">
+        </div>
+      </dd>
+      <div id="contenedorComentarios">
+      </div>
+      <div id="contenedor row">
+        <p>Dejanos tu comentario:</p>
+          <textarea class="col-lg-4" id="comentario" cols="30" rows="5">Puntuacion:</textarea>
+          <button class="btn btn-outline-success my-2 my-sm-0" onclick="enviarDatos()">Enviar</button>
+      </div>
+   
     </div>
-  </div>
+  </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
         <a href="#">Volver arriba</a>
       </p>
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+      <p>Este sitio forma parte de Desarrollo Web - JAP - 2021</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
