@@ -26,8 +26,17 @@
           <a class="nav-item nav-link active" href="categories.html">Categorias</a>
           <a class="nav-item nav-link" href="products.html">Productos <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="sell.html">Vender</a>
-          <a class="nav-item nav-link" href="cart.html">Carrito</a>
-          <a id="nombreUsuario" class="nav-item nav-link disabled text-end" href="#" tabindex="-1" aria-disabled="true">Hola, </a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nombreUsuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Hola, 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Perfil</a>
+              <a class="dropdown-item" href="cart.html">Carrito</a>
+              <a class="dropdown-item" href="login.html" onclick="cerrarSesion()">Cerrar Sesion</a>
+              
+            </div>
+          </li>
         </div>
       </div>
     </nav>

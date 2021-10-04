@@ -28,14 +28,22 @@
         <a class="nav-item nav-link" href="categories.html">Categorias</a>
         <a class="nav-item nav-link active" href="products.html">Productos <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="sell.html">Vender</a>
-        <a class="nav-item nav-link" href="cart.html">Carrito</a>
-        
-        <a id="nombreUsuario" class="nav-item nav-link disabled text-end" href="#" tabindex="-1" aria-disabled="true">Hola, </a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="nombreUsuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Hola, 
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Perfil</a>
+            <a class="dropdown-item" href="cart.html">Carrito</a>
+            <a class="dropdown-item" href="login.html" onclick="cerrarSesion()">Cerrar Sesion</a>
+            
+          </div>
+        </li>
       </div>
     </div>
   </nav>
   <main role="main">
-    <div class="container mt-5 bg-primary" >
+    <div class="container mt-5" >
       <div class="text-center p-4">
         <h2>Información del producto</h2>
         <p class="lead">Encontrarás aquí toda la información del producto seeleccionado.</p>
@@ -71,6 +79,9 @@
         <dd>
           <p id="productCategory"></p>
         </dd>
+        <dt>Relacionados:</dt>
+        <div id="relacionados"></div>
+
       </dl>
 
       <dt>Comentarios:</dt>

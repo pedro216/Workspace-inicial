@@ -1,3 +1,28 @@
+let productos=[];
+let infoProducto={};
+function mostrarRelacionados(array){
+
+    let html = "";
+    for(let i = 0; i< array.length;i++){
+        let relacionado = array[i];
+        html +=`<div><b>${productos[relacionado].name}</b>
+        <p>Precio:USD${productos[relacionado].cost}</p>
+        <div class="col-3">
+        <img src="${productos[relacionado].imgSrc}" alt="" class="img-thumbnail">
+    </div> <br> </div>`
+    }
+
+    document.getElementById("relacionados").innerHTML = html;
+
+}
+
+
+
+
+
+
+
+
 var productinfo = {};
 var comentarios = {};
 
@@ -142,6 +167,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(productinfo.images);
+            getJSONData(PRODUCTS_URL).then(function(resultObj){
+
+                productos=resultObj.data;
+                mostrarRelacionados(productinfo.relatedProducts)
+            })
+
             showComentsProduct();
         }
     });
