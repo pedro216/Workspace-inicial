@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             productDescriptionHTML.innerHTML = productinfo.description;
             productCountHTML.innerHTML = productinfo.soldCount;
             productCategoryHTML.innerHTML = productinfo.category;
-            productCostHTML.innerHTML = productinfo.cost
+            productCostHTML.innerHTML += productinfo.cost
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(productinfo.images);

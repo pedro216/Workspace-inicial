@@ -1,103 +1,124 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>eMercado - Todo lo que busques está aquí</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html">&gteMercado - Todo lo que buscas está aquí&lt</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" href="index.html">Inicio </a>
-          <a class="nav-item nav-link" href="categories.html">Categorias</a>
-          <a class="nav-item nav-link active" href="products.html">Productos <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="sell.html">Vender</a>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="nombreUsuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Hola, 
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Perfil</a>
-              <a class="dropdown-item" href="cart.html">Carrito</a>
-              <a class="dropdown-item" href="login.html" onclick="cerrarSesion()">Cerrar Sesion</a>
-              
-            </div>
-          </li>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid navbar-light bg-light">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="index.html">&#8658e-Mercado&#8656</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Inicio </a>
+            <a class="nav-item nav-link" href="categories.html">Categorias</a>
+            <a class="nav-item nav-link active" href="products.html">Productos <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="sell.html">Vender</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="nombreUsuario" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Hola,
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Perfil</a>
+                <a class="dropdown-item" href="cart.html">Carrito</a>
+                <a class="dropdown-item" href="login.html" onclick="cerrarSesion()">Cerrar Sesion</a>
+
+              </div>
+            </li>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main role="main" class="pb-5">
+
+    <div class="container">
+      <div class="text-center p-4">
+        <h2>Nuestros Productos</h2>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col text-right">
+          <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+            <label class="btn btn-light" id="sortAscByPrecio">
+              <input type="radio" name="options" autocomplete="off">Menores precios
+            </label>
+            <label class="btn btn-light" id="sortDescByPrecio">
+              <input type="radio" name="options" autocomplete="off">Mayores Precios
+            </label>
+            <label class="btn btn-light active" id="sortAsc">
+              <input type="radio" name="options" autocomplete="off" checked>A-Z
+            </label>
+            <label class="btn btn-light" id="sortDesc">
+              <input type="radio" name="options" autocomplete="off">Z-A
+            </label>
+            <label class="btn btn-light" id="sortByCount">
+              <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Mas
+              Vendidos.
+            </label>
+          </div>
         </div>
       </div>
-    </nav>
-    <main role="main" class="pb-5">
-      <div class="text-center p-4">
-          <h2>Productos</h2>
-          <p class="lead">Estos son todos nuestros productos disponibles en el sitio.</p>
+      <div class="row justify-content-end">
+        <div class="col-md-6"></div>
+        <div class="col-md-6 col-sm-12 mb-1 container">
+          <div class="row container p-0 m-0">
+            <div class="col">
+              <p class="font-weight-normal text-right my-2">Filtro Precio</p>
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+            </div>
+            <div class="col-3 p-0">
+              <div class="btn-group" role="group">
+                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container">
-          <div class="row">
-              <div class="col text-right">
-                  <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-                    <label class="btn btn-light" id="sortAscByPrecio" >
-                      <input type="radio" name="options" autocomplete="off"  >Menores precios
-                  </label>
-                  <label class="btn btn-light" id="sortDescByPrecio" >
-                    <input type="radio" name="options" autocomplete="off">Mayores Precios
-                </label>
-                      <label class="btn btn-light active" id="sortAsc" >
-                          <input type="radio" name="options" autocomplete="off" checked>A-Z
-                      </label>
-                      <label class="btn btn-light" id="sortDesc" >
-                          <input type="radio" name="options" autocomplete="off">Z-A
-                      </label>
-                      <label class="btn btn-light" id="sortByCount" >
-                          <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Mas Vendidos.
-                      </label>
-                  </div>
-              </div>
-          </div>
-          <div class="row justify-content-end">
-            <div class="col-md-6"></div>
-              <div class="col-md-6 col-sm-12 mb-1 container">
-                <div class="row container p-0 m-0">
-                  <div class="col">
-                    <p class="font-weight-normal text-right my-2">Filtro Precio</p>
-                  </div>
-                  <div class="col">
-                    <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
-                  </div>
-                  <div class="col">
-                    <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
-                  </div>
-                  <div class="col-3 p-0">
-                    <div class="btn-group" role="group">
-                      <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
-                      <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <div class="row">
-              <div class="list-group" id="produc-list-container"> 
-              </div>
-          </div>
+      <div class="row">
+        <div class="list-group" id="produc-list-container">
+        </div>
       </div>
+    </div>
   </main>
-    <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/products.js"></script>
-  </body>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/products.js"></script>
+</body>
+
 </html>

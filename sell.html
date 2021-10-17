@@ -30,31 +30,38 @@
     <link href="css/dropzone.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html">&gteMercado - Todo lo que buscas está aquí&lt</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" href="index.html">Inicio </a>
-          <a class="nav-item nav-link" href="categories.html">Categorias</a>
-          <a class="nav-item nav-link" href="products.html">Productos <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="sell.html">Vender</a>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="nombreUsuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Hola, 
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Perfil</a>
-              <a class="dropdown-item" href="cart.html">Carrito</a>
-              <a class="dropdown-item" href="login.html" onclick="cerrarSesion()">Cerrar Sesion</a>
-              
+    <div class="container-fluid navbar-light bg-light">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg ">
+          <a class="navbar-brand" href="index.html">&#8658e-Mercado&#8656</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="index.html">Inicio </a>
+              <a class="nav-item nav-link" href="categories.html">Categorias</a>
+              <a class="nav-item nav-link" href="products.html">Productos <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active" href="sell.html">Vender</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="nombreUsuario" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Hola,
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Perfil</a>
+                  <a class="dropdown-item" href="cart.html">Carrito</a>
+                  <a class="dropdown-item" href="login.html" onclick="cerrarSesion()">Cerrar Sesion</a>
+  
+                </div>
+              </li>
             </div>
-          </li>
-        </div>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </div>
+    
       <div class="container">
         <div class="text-center p-4">
           <h2>Vender</h2>

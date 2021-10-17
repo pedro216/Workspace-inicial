@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,9 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
-
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.3/css/font-awesome.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="css/cartcss.css">
 
   <style>
     .bd-placeholder-img {
@@ -34,39 +37,102 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">&gteMercado - Todo lo que buscas está aquí&lt</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="index.html">Inicio </a>
-        <a class="nav-item nav-link" href="categories.html">Categorias</a>
-        <a class="nav-item nav-link" href="products.html">Productos <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="sell.html">Vender</a>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="nombreUsuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Hola, 
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Perfil</a>
-            <a class="dropdown-item" href="cart.html">Carrito</a>
-            <a class="dropdown-item" href="login.html" onclick="cerrarSesion()">Cerrar Sesion</a>
-            
+  <div class="container-fluid navbar-light bg-light">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="index.html">&#8658e-Mercado&#8656</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Inicio </a>
+            <a class="nav-item nav-link" href="categories.html">Categorias</a>
+            <a class="nav-item nav-link" href="products.html">Productos <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="sell.html">Vender</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="nombreUsuario" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Hola,
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Perfil</a>
+                <a class="dropdown-item" href="cart.html">Carrito</a>
+                <a class="dropdown-item" href="login.html" onclick="cerrarSesion()">Cerrar Sesion</a>
+
+              </div>
+            </li>
           </div>
-        </li>
-      </div>
-    </div>
-  </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+        </div>
+      </nav>
     </div>
   </div>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="carrito">
+
+
+      </tbody>
+    </table>
+  </div>
+
+ 
+
+    
+     
+      <div class="container">
+  
+
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <h5 style="text-align: center;"><b>Tipo de envío y dirección</b></h5>
+      </tr>
+    </thead>
+    
+    <tbody>
+       <tr>
+      <th>
+        <form class="">
+        <input type="radio" name="option" id="radio1" checked />
+        <label for="radio1">Premium 2 a 5 dias (15%)</label><br />
+        <input type="radio" name="option" id="radio2" />
+        <label for="radio2">Express 5 a 8 dias (7%)</label><br />
+        <input type="radio" name="option" id="radio3" />
+        <label for="radio1">Standar 12 a 15 dias(5%)</label><br />
+        
+      </form>
+      </th>
+      <th>
+        <input type="text" value="Calle:">
+        <br>
+        <br>
+         <input type="text" value="Esquina:">
+      </th>
+      <th>
+         <input type="text" value="Numero:">
+        <br>
+        <br>
+        <input type="button" value="Confirmar Pago">
+      </th>
+      </tr>
+      
+    </tbody>
+  </table>
+
+ </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -75,6 +141,8 @@
       <div></div>
     </div>
   </div>
+
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>
