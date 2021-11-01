@@ -47,7 +47,7 @@ function sortProducts(criteria, array){
         });
     }
 
-    return result;
+    return result; 
 }
 
 function showProductsList(){
@@ -60,23 +60,25 @@ function showProductsList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(product.cost) <= maxCount))){
 
             htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ product.name +`</h4>
-                            <small class="text-muted">` + product.soldCount + ` artículos</small>
-                        </div>
-                        <p class="mb-1">` + product.description + `</p>
-                        <p class="mb-1">` + product.currency + product.cost + `</p>
-                    </div>
-                </div>
+            
+            <div class="col-md-4">
+            <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
+              <img class="bd-placeholder-img card-img-top" src="` + product.imgSrc + `">
+              <h3 class="m-3">` + product.name + ` (`+ product.soldCount + `)</h3>
+              <div class="card-body">
+                <p class="card-text">` + product.description + ` </p>
+                <p class="card-text">` + product.currency + product.cost + ` </p>
+              </div>
             </a>
+          </div>
+
+
+
+
+
             `
         }
+
 
         document.getElementById("produc-list-container").innerHTML = htmlContentToAppend;
     }

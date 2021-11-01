@@ -28,8 +28,8 @@ function showCarrito() {
                <tr>
                <td><img src="${article.src}" class = "img-fluid" style ="max-width:90px!important"></td>
                <td class="align-middle">${article.name}</td>
-               <td class="align-middle">${article.currency} ${article.unitCost}-equivale a UYU${subTotal}</td>
-               <td class="align-middle"><input type="number" style="width:100px" min ="1" value=${article.count} onchange="updateProductoSubtotal(this.value,${subTotal},${id})" ></td>
+               <td class="align-middle">${article.currency} ${article.unitCost}&#8660 UYU${subTotal}</td>
+               <td class="align-middle"><input type="number" style="width:100px" min ="0" value=${article.count} onchange="updateProductoSubtotal(this.value,${subTotal},${id})" ></td>
                <td id="${id}" class="subtotal align-middle">${subTotal} </td>
                </tr>`
 
@@ -41,7 +41,7 @@ function showCarrito() {
         <td><img src="${article.src}" class = "img-fluid" style ="max-width:90px!important"></td>
         <td class="align-middle">${article.name}</td>
         <td class="align-middle">${article.currency} ${article.unitCost}</td>
-        <td class="align-middle"><input type="number" style="width:100px" min ="1" value=${article.count} onchange="updateProductoSubtotal(this.value,${article.unitCost},${id})" ></td>
+        <td class="align-middle"><input type="number" style="width:100px" min ="0" value=${article.count} onchange="updateProductoSubtotal(this.value,${article.unitCost},${id})" ></td>
         <td id="${id}" class="subtotal align-middle">${subTotal} </td>
         </tr>`
 
@@ -57,7 +57,7 @@ function showCarrito() {
           <th scope="col"></th> 
           <th scope="col"></th>
           <th scope="col"></th>
-          <th scope="col">Total: $</th>
+          <th scope="col">Total: </th>
           <th id="total" scope="col" >$</th>
         </tr>
       </thead>
