@@ -4,6 +4,9 @@ let subTotal = 0;
 
 
 
+
+
+
 /* Funcion que actualiza los subtotales del carrrito cuanto se modifica la cantidad de articulos presentes en el carrito,y lanza la funcion que actualiza el total*/
 
 function updateProductoSubtotal(cantidad, costo, id) {
@@ -11,10 +14,23 @@ function updateProductoSubtotal(cantidad, costo, id) {
     updateTotal()
 }
 
-/*funcion que inserta y muestra en el html los articulos y sus atributos presentes en el array productosCarrito que es donde se guarda la respuesta de la funcion getCarrito,y tambien inserta los elementos html donde se muestra el total a pagar*/ 
+
+/*funcion que usa la variable donde se escuentra el total delcarrito y lo multiplica por el porcentaje del envio para sumarle el envio al precio final*/
+
+
+
+function validacion() {
+
+
+    return true
+
+
+}
+
+/*funcion que inserta y muestra en el html los articulos y sus atributos presentes en el array productosCarrito que es donde se guarda la respuesta de la funcion getCarrito,y tambien inserta los elementos html donde se muestra el total a pagar*/
 function showCarrito() {
     let index = 0;
-    
+
     let htmlToAppend = "";
     for (let article of productosCarrito) {
         index++;
@@ -57,8 +73,15 @@ function showCarrito() {
           <th scope="col"></th> 
           <th scope="col"></th>
           <th scope="col"></th>
-          <th scope="col">Total: </th>
-          <th id="total" scope="col" >$</th>
+          <th scope="col">SubTotal: </th>
+          <th id="total" scope="col" ></th>
+        </tr>
+        <tr>
+        <th scope="col"></th> 
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">Total: </th>
+        <th scope="col" ><div id="envio">S</div> </th>
         </tr>
       </thead>
     </div> `
@@ -83,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             productosCarrito = respuesta.articles;
             showCarrito();
             updateTotal();
+            sumaEnvio(0.15);
             console.log(productosCarrito);
         })
 });
@@ -96,4 +120,55 @@ function updateTotal() {
         Total += parseInt(iterator.innerHTML);
     }
     document.getElementById("total").innerHTML = Total + "$"
+}
+
+
+function validarFormulario() {
+    
+
+    var calle = document.getElementById('calle').value;
+    if (calle.length == 0) {
+
+        alert('Por favor ingrese una calle');
+        return;
+    }
+    var esquina = document.getElementById('esquina').value;
+    if (esquina.length == 0) {
+        alert('Ingrese una Esquina');
+        return;
+    }
+
+    var numero = document.getElementById('numero').value;
+    if (numero.length == 0) {
+        alert('Ingrese un Numero');
+        return;
+    }
+
+
+    else {
+botonCompra()
+
+    }
+}
+
+function botonCompra() {
+
+
+    document.getElementById("botonCompra").innerHTML =
+
+        `<button type="submit" class="btn btn-primary launch" data-toggle="modal" data-target="#staticBackdrop" onclick="validarFormulario()"> <i class="fa fa-credit-card"></i> <i class="fa fa-paypal "></i> Pay Now
+    </button> `
+
+}
+document.addEventListener("DOMContentLoaded", function (e) {
+   
+        
+});
+function sumaEnvio(porcentaje) {
+
+
+
+    document.getElementById("envio").innerHTML = porcentaje * Total + Total + '$'
+
+
 }
